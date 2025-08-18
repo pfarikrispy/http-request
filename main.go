@@ -17,5 +17,4 @@ func main() {
 	} else {
 		fmt.Printf("response: %s", response)
 	}
-
 }
