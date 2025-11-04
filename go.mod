@@ -1,10 +1,10 @@
 module github.com/kubescape/http-request
 
-go 1.23
+go 1.24
 
 require (
 	github.com/armosec/utils-go v0.0.58
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
