@@ -1,4 +1,4 @@
-FROM --platform=$BUILDPLATFORM golang:1.24.9-bookworm as builder
+FROM --platform=$BUILDPLATFORM golang:1.25-trixie as builder
 
 ENV GO111MODULE=on CGO_ENABLED=0
 WORKDIR /work
@@ -9,7 +9,7 @@ RUN --mount=target=. \
     --mount=type=cache,target=/go/pkg \
     GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o /out/http_request
 
-FROM gcr.io/distroless/static-debian12:nonroot
+FROM gcr.io/distroless/static-debian13:nonroot
 
 USER nonroot
 WORKDIR /home/nonroot/
